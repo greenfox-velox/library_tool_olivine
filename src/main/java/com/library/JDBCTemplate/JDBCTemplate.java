@@ -1,4 +1,4 @@
-package library.JDBCTemplate;
+package com.library.JDBCTemplate;
 
 import com.library.user.User;
 import org.springframework.context.annotation.Configuration;
@@ -43,18 +43,6 @@ public class JDBCTemplate {
         dataSource.setUsername("b32ab3afad4bf7");
         return dataSource;
     }
-
-
-//    public String addUser(User user){
-//        if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
-//            String SQL = "insert into users (email, firstname, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
-//            jdbcTemplateObject.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
-//            return "welcome";
-//        }   else {
-//            return "register";
-//        }
-//    }
-
 
     public String registerUser(User user) {
        if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
