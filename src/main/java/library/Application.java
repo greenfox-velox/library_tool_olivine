@@ -1,7 +1,9 @@
-package com.greenfox.olivine.librarytool;
+package library;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.net.URISyntaxException;
 
 @SpringBootApplication
 public class Application {
@@ -9,7 +11,7 @@ public class Application {
         System.out.println("hello");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
         SpringApplication.run(Application.class, args);
     }
 }
