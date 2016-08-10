@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Registration</h1>
+<form action="#" th:action="@{/registration}" th:object="${user}" method="post">
+    <p>Username: <input type="text" th:field="*{userName}" /></p>
+    <p th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Username Error</p>
+
+    <p>First name: <input type="text" th:field="*{firstName}" /></p>
+    <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name Error</p>
+
+    <p>Last name: <input type="text" th:field="*{lastName}" /></p>
+    <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name Error</p>
+
+    <p>Email: <input type="text" th:field="*{email}" /></p>
+    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</p>
+
+    <p>Password: <input type="password" th:field="*{password}" /></p>
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
+
+    <p>Password confirmation: <input type="password" th:field="*{confPassword}" /></p>
+    <p th:if="${#fields.hasErrors('confPassword')}" th:errors="*{confPassword}">ConfPassword Error</p>
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
