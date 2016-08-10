@@ -1,4 +1,4 @@
-package library.JDBCTemplate;
+package com.library.JDBCTemplate;
 
 import com.library.user.User;
 import org.springframework.jdbc.core.RowMapper;

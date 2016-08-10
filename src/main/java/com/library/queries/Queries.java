@@ -1,4 +1,4 @@
-package library.queries;
+package com.library.queries;
 
 /**
  * Created by Attila on 09/08/2016.
