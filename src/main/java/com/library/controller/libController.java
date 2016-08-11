@@ -1,7 +1,7 @@
 package com.library.controller;
 
 import com.library.JDBCTemplate.JDBCTemplate;
-import com.library.Validator.Validator;
+import com.library.validator.Validator;
 import com.library.user.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
