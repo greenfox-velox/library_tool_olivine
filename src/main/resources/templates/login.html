@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example </title>
+    <!--<link href="/css/bootstrap.css" rel="stylesheet"/>-->
+    <!--<link href="/css/bootstrap.min.css" rel="stylesheet"/>-->
+    <!--<link href="/css/bootstrap-responsive.css" rel="stylesheet"/>-->
+    <!--<link href="/css/bootstrap-responsive.min.css" rel="stylesheet"/>-->
+    <!--<link href="/css/ofac.css" rel="stylesheet"/>-->
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>-->
+
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid username and email.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+<form action="#" th:action="@{/login}" method="post">
+    <!--<p>Username: <input type="text" th:field="*{userName}" /></p>-->
+    <!--<p th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Username Error</p>-->
+    <div><label> Username : <input type="text" name="username"/> </label></div>
+
+    <div><label> Email: <input type="text" name="password"/> </label></div>
+
+    <!--<p>Email: <input type="text" th:field="*{email}" /></p>-->
+    <!--<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</p>-->
+
+    <!--<p>Password: <input type="password" th:field="*{password}" /></p>-->
+    <!--<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>-->
+
+    <p><input type="submit" value="Sign In" /></p>
+
+    <a href="/registration">Register a new account</a>
+
+</form>
+
+</body>
+</html>
