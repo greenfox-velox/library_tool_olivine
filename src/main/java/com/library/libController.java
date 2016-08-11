@@ -1,4 +1,4 @@
-package com.library.controller;
+package com.library;
 
 import com.library.JDBCTemplate.JDBCTemplate;
 import com.library.validator.Validator;

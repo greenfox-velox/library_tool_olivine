@@ -13,7 +13,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-handling-form-submission'
+    baseName = 'gs-rest-service'
     version =  '0.1.0'
 }
 
@@ -26,8 +26,8 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-//    compile("org.springframework.boot:spring-boot-starter-web")
-//    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
     compile("org.springframework:spring-jdbc")
     testCompile("junit:junit")
     compile("com.h2database:h2")
@@ -36,8 +36,15 @@ dependencies {
     compile ("org.hibernate:hibernate-entitymanager:5.2.2.Final")
     compile("org.hibernate:hibernate-validator")
     compile("org.apache.tomcat.embed:tomcat-embed-el")
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '4.0.3.RELEASE'
+
+
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
+}
+
+task stage {
+    dependsOn build
 }
