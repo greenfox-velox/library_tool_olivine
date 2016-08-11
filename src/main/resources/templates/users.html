@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="user : ${usersList}">
+        <td th:text="${user.firstName}">First name</td>
+        <td th:text="${user.lastName}">Last name</td>
+        <td th:text="${user.userName}">Username</td>
+        <td th:text="${user.email}">Email</td>
+    </tr>
+</table>
+
+
+<a href="/registration">helloooooooo</a>
+</body>
+</html>
