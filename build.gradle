@@ -36,10 +36,14 @@ dependencies {
     compile ("org.hibernate:hibernate-entitymanager:5.2.2.Final")
     compile("org.hibernate:hibernate-validator")
     compile("org.apache.tomcat.embed:tomcat-embed-el")
-
     compile("org.springframework.boot:spring-boot-starter-security")
+    compile (group: 'org.apache.poi', name: 'poi', version: '3.13')
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
+}
+
+task stage {
+    dependsOn build
 }
