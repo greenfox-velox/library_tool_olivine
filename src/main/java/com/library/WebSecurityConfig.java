@@ -9,30 +9,29 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/home", "/registration", "/users").permitAll()
 //                .antMatchers("/style/**","/fonts/**","/libs/**").permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/hello", true).permitAll()
-                .and()
-                .logout().permitAll();
-
-
+            .anyRequest()
+            .authenticated()
+            .and()
+            .formLogin()
+            .loginPage("/login")
+            .defaultSuccessUrl("/hello", true).permitAll()
+            .and()
+            .logout().permitAll();
     }
 
 
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
-                .inMemoryAuthentication()
-                .withUser("user")
-                .password("asdasd")
-                .roles("USER");
+            .inMemoryAuthentication()
+            .withUser("user")
+            .password("asdasd")
+            .roles("USER");
     }
 }
