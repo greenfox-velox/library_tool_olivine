@@ -25,13 +25,6 @@ public class libController {
         return "registration";
     }
 
-//    @RequestMapping(value="/registration", method=RequestMethod.POST)
-//    public String registrationSubmit(@ModelAttribute User user, Model model) {
-//        myTemplate.registerUser(user);
-//        model.addAttribute("user", user);
-//        return "welcome";
-//    }
-
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String regSubmit(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
