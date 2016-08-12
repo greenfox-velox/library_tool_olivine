@@ -15,7 +15,6 @@ import javax.validation.Valid;
 @Controller
 public class libController {
 
-
     public JDBCTemplate myTemplate = new JDBCTemplate();
     Validator validator = new Validator();
 
