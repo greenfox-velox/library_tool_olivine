@@ -1,4 +1,4 @@
-package com.library.JDBCTemplate;
+package com.library;
 
 import com.library.user.User;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +23,9 @@ public class JDBCTemplate {
     public DriverManagerDataSource getDatasource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         try {
-            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true");
+//            URI dbUri = new URI(System.getenv("mysql://b540da1bff825c:4cf3a5c3@eu-cdbr-west-01.cleardb.com/heroku_8414b8f4e2fbcbe?reconnect=true"));
+//            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
             String username = dbUri.getUserInfo().split(":")[0];
             String password = dbUri.getUserInfo().split(":")[1];
             String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
