@@ -7,16 +7,20 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import javax.sql.DataSource;
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    protected DataSource dataSource;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
             .antMatchers("/", "/home", "/registration", "/users").permitAll()
-//                .antMatchers("/style/**","/fonts/**","/libs/**").permitAll()
             .anyRequest()
             .authenticated()
             .and()
@@ -28,11 +32,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-            .withUser("user")
-            .password("asdasd")
-            .roles("USER");
+    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+    auth.jdbcAuthentication().dataSource(dataSource)
+    .usersByUsernameQuery("select userName, email from users where userName=?")
+    .authoritiesByUsernameQuery("select username, role from user_roles where username=?");
     }
+
+
+
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+//        auth
+//            .inMemoryAuthentication()
+//            .withUser("user")
+//            .password("asdasd")
+//            .roles("USER");
+//    }
 }

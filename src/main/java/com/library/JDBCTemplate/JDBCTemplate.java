@@ -1,6 +1,7 @@
 package com.library.JDBCTemplate;
 
 import com.library.user.User;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -16,11 +17,12 @@ public class JDBCTemplate {
     private JdbcTemplate jdbcTemplateObject;
 
     public JDBCTemplate() {
-        dataSource = getDatasource();
+        dataSource = dataSource();
         jdbcTemplateObject = new JdbcTemplate(dataSource);
     }
 
-    public DriverManagerDataSource getDatasource(){
+//    @Bean(name = "dataSource")
+    public DriverManagerDataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         try {
             URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));

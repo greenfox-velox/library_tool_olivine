@@ -13,10 +13,6 @@ public class User {
     @NotEmpty(message = "Please enter your last name")
     private String lastName;
 
-    @NotEmpty(message = "Please enter your password.")
-    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
-    private String password;
-
     private String role;
 
     @NotEmpty(message = "Please enter your username")
@@ -26,6 +22,10 @@ public class User {
     @Email(regexp="\\w+@\\w+\\.{1}\\w+", message="Please provide a valid email address!" )
     @NotEmpty(message = "Please enter your email address")
     private String email;
+
+    @NotEmpty(message = "Please enter your password.")
+    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
+    private String password;
 
     @NotEmpty(message = "Please enter your password.")
     @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
