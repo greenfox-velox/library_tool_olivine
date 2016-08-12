@@ -47,6 +47,7 @@ public class JDBCTemplate {
             String SQL = "insert into users (email, firstname, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
             jdbcTemplateObject.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
             return "welcome";
+
         } else {
             return "registration";
         }
