@@ -1,6 +1,7 @@
 package com.library.validator;
 
-import com.library.JDBCTemplate.JDBCTemplate;
+
+import com.library.JDBCTemplate;
 import com.library.user.User;
 
 public class Validator {
