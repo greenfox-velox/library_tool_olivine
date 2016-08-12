@@ -1,8 +1,8 @@
 package com.library.controller;
 
 import com.library.JDBCTemplate.JDBCTemplate;
-import com.library.validator.Validator;
 import com.library.user.User;
+import com.library.validator.Validator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,7 +14,6 @@ import javax.validation.Valid;
 
 @Controller
 public class libController {
-
 
     public JDBCTemplate myTemplate = new JDBCTemplate();
     Validator validator = new Validator();

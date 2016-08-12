@@ -26,6 +26,7 @@ public class JDBCTemplate {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         try {
             URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+//            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true");
             String username = dbUri.getUserInfo().split(":")[0];
             String password = dbUri.getUserInfo().split(":")[1];
             String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
