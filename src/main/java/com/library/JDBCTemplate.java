@@ -1,5 +1,6 @@
-package com.library.JDBCTemplate;
+package com.library;
 
+import com.library.UserMapper;
 import com.library.user.User;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -14,21 +14,17 @@ public class User {
     private String lastName;
 
     @NotEmpty(message = "Please enter your password.")
-    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
     private String password;
 
     private String role;
 
-    @NotEmpty(message = "Please enter your username")
     @Size(min=3, max=30, message = "Username must be at least 3 characters!")
     private String userName;
 
     @Email(regexp="\\w+@\\w+\\.{1}\\w+", message="Please provide a valid email address!" )
-    @NotEmpty(message = "Please enter your email address")
     private String email;
 
     @NotEmpty(message = "Please enter your password.")
-    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
     private String confPassword;
 
     private String project;
