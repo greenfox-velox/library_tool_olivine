@@ -2,13 +2,14 @@ package com.library;
 
 import com.library.UserMapper;
 import com.library.user.User;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
 import javax.sql.DataSource;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 
 @Configuration
 public class JDBCTemplate {
@@ -17,28 +18,33 @@ public class JDBCTemplate {
     private JdbcTemplate jdbcTemplateObject;
 
     public JDBCTemplate() {
-        dataSource = getDatasource();
+        dataSource = dataSource();
         jdbcTemplateObject = new JdbcTemplate(dataSource);
     }
 
-    public DriverManagerDataSource getDatasource(){
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        try {
-            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
-//            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true");
-            String username = dbUri.getUserInfo().split(":")[0];
-            String password = dbUri.getUserInfo().split(":")[1];
-            String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
-            dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-            dataSource.setPassword(password);
-            dataSource.setUrl(dbUrl);
-            dataSource.setUsername(username);
-            return dataSource;
-        } catch(URISyntaxException e) {
-            System.err.println("Unable to create host URI");
-            e.printStackTrace();
-            return null;
+    public HashMap<String,String> setUrlForDataSource() {
+                HashMap<String,String> myUrl = new HashMap<String,String>();
+                try {
+                    URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+                    myUrl.put("username", dbUri.getUserInfo().split(":")[0]);
+                    myUrl.put("password", dbUri.getUserInfo().split(":")[1]);
+                    myUrl.put("dbUrl", "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath());
+                    return myUrl;
+                } catch(URISyntaxException e) {
+                    System.err.println("Unable to create host URI");
+                    e.printStackTrace();
+                    return null;
         }
+    }
+
+//    @Bean(name = "dataSource")
+    public DriverManagerDataSource dataSource(){
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setPassword(setUrlForDataSource().get("password"));
+        dataSource.setUrl(setUrlForDataSource().get("dbUrl"));
+        dataSource.setUsername(setUrlForDataSource().get("username"));
+        return dataSource;
     }
 
     public String registerUser(User user) {
@@ -59,8 +65,6 @@ public class JDBCTemplate {
         }
         return true;
     }
-
-
 
 
     public boolean passwordCheck(User user) {
