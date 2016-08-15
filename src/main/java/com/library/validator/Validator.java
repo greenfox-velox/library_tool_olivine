@@ -3,12 +3,13 @@ package com.library.validator;
 
 import com.library.JDBCTemplate;
 import com.library.user.User;
+import com.library.userRequests.userRequests;
 
 public class Validator {
 
-    JDBCTemplate myJDBCTemplate = new JDBCTemplate();
+    userRequests requests = new userRequests();
 
     public String registrationValidation(User regUser) {
-        return myJDBCTemplate.registerUser(regUser);
+        return requests.registerUser(regUser);
     }
 }
