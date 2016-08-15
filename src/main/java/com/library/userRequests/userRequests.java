@@ -14,7 +14,7 @@ public class userRequests {
 
     public String registerUser(User user) {
         if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
-            String SQL = "insert into users (email, firstname, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
+            String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
             template.templateObject.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
             return "welcome";
         } else {

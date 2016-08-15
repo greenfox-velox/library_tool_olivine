@@ -4,7 +4,6 @@ import com.library.JDBCTemplate;
 import com.library.validator.Validator;
 import com.library.user.User;
 import org.apache.log4j.Logger;
-import com.library.validator.Validator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -40,6 +39,5 @@ public class libController {
             return validator.registrationValidation(user);
         }
     }
-
 
 }

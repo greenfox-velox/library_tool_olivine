@@ -1157,3 +1157,7 @@ java.lang.Exception: Testing
 2016-08-15 10:13:53 INFO  libController:39 - Navigated to Welcome site
 2016-08-15 10:17:33 INFO  libController:28 - Registration page loaded
 2016-08-15 10:17:53 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:40:17 INFO  libController:28 - Registration page loaded
+2016-08-15 10:40:17 INFO  libController:28 - Registration page loaded
+2016-08-15 10:41:07 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:42:02 INFO  libController:28 - Registration page loaded
