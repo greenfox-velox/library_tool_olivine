@@ -1,4 +1,4 @@
-package com.library.validator;
+package unused.validator;
 
 import org.junit.Test;
 

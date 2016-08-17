@@ -1,21 +1,33 @@
 package com.library.userRequests;
 
-import com.library.JDBCTemplate;
-import com.library.UserMapper;
-import com.library.user.User;
+//import com.library.config.JDBCTemplate;
+import com.library.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.session.SessionProperties;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import javax.sql.DataSource;
 
 /**
  * Created by Attila on 15/08/2016.
  */
 public class userRequests {
 
-    JDBCTemplate template = new JDBCTemplate();
+    JdbcTemplate template;
+
+    public userRequests(DataSource ds) {
+        template = new JdbcTemplate(ds);
+
+    }
+//
+//    public String registrationValidation(User regUser) {
+//        return registerUser(regUser);
+//    }
 
     public String registerUser(User user) {
         if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
             String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
-            template.templateObject.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
+            template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
             return "welcome";
         } else {
             return "registration";
@@ -23,7 +35,7 @@ public class userRequests {
     }
 
     public boolean isUsernameFree(String userName) {
-        for (User user : template.templateObject.query("select * from users", new UserMapper())) {
+        for (User user : template.query("select * from users", new UserMapper())) {
             if (user.getUserName().equals(userName)) {
                 return false;
             }
