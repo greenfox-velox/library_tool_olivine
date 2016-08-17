@@ -1,6 +1,6 @@
 package com.library.controller;
 
-import com.library.userRequests.userRequests;
+import com.library.userRequests.*;
 //import unused.validator.Validator;
 import com.library.model.User;
 import org.apache.log4j.Logger;
@@ -33,14 +33,18 @@ public class RegController {
     }
 
     @RequestMapping(value="/registration", method=RequestMethod.POST)
-    public String regSubmit(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            logger.error("Something went wrong");
-            return "registration";
+    public ModelAndView regSubmit(@Valid @ModelAttribute("user") User user, BindingResult result) {
+        ModelAndView modelAndView = new ModelAndView();
+        boolean userIsValid = ur.registerUser(user);
+        ur.resultHasErrors(result);
+        if (!userIsValid) {
+            logger.error("Something went wrong (invalid userName, f*cker!)");
+            modelAndView.setViewName("registration");
         } else {
             logger.info("Navigated to Welcome site");
-            return ur.registerUser(user);
+            modelAndView.setViewName("welcome");
         }
+        return modelAndView;
     }
 
 

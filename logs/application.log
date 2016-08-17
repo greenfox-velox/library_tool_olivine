@@ -1178,3 +1178,19 @@ java.lang.Exception: Testing
 2016-08-17 12:44:43 INFO  RegController:28 - Registration page loaded
 2016-08-17 12:47:50 INFO  RegController:28 - Registration page loaded
 2016-08-17 12:48:11 INFO  RegController:41 - Navigated to Welcome site
+2016-08-17 13:19:07 INFO  RegController:28 - Registration page loaded
+2016-08-17 13:19:56 INFO  RegController:43 - Navigated to Welcome site
+2016-08-17 13:20:12 INFO  RegController:28 - Registration page loaded
+2016-08-17 13:26:01 INFO  RegController:28 - Registration page loaded
+2016-08-17 13:27:43 ERROR RegController:40 - Something went wrong (invalid userName, f*cker!)
+2016-08-17 13:28:25 INFO  RegController:28 - Registration page loaded
+2016-08-17 13:28:42 ERROR RegController:40 - Something went wrong (invalid userName, f*cker!)
+2016-08-17 13:29:06 ERROR RegController:40 - Something went wrong (invalid userName, f*cker!)
+2016-08-17 13:29:16 ERROR RegController:40 - Something went wrong (invalid userName, f*cker!)
+2016-08-17 15:20:54 INFO  RegController:28 - Registration page loaded
+2016-08-17 15:21:28 INFO  RegController:44 - Navigated to Welcome site
+2016-08-17 15:25:09 INFO  RegController:28 - Registration page loaded
+2016-08-17 15:27:12 INFO  RegController:28 - Registration page loaded
+2016-08-17 15:28:21 INFO  RegController:28 - Registration page loaded
+2016-08-17 15:30:48 INFO  RegController:28 - Registration page loaded
+2016-08-17 15:31:03 INFO  RegController:44 - Navigated to Welcome site

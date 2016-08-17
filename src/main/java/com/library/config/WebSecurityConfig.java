@@ -32,16 +32,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+            .authorizeRequests()
+                .antMatchers("/", "/login", "/registration", "/css/**").permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
             .formLogin()
-            .loginPage("/login")
-            .failureUrl("/login?error")
-            .usernameParameter("userName")
-            .passwordParameter("password")
-            .and()
-            .logout()
-            .logoutSuccessUrl("/login?logout")
-            .and()
-            .csrf();
+                .loginPage("/login")
+                .failureUrl("/login?error")
+                .usernameParameter("userName")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/welcome", true)
+                .and()
+            .logout().permitAll()
+                .logoutSuccessUrl("/login?logout")
+                .and()
+                .csrf();
     }
 }
 

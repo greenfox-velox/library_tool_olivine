@@ -12,18 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = {"/login", "/"}, method = RequestMethod.GET)
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login");
         return modelAndView;
     }
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/welcome")
     public ModelAndView hello() {
         ModelAndView modelAndView = new ModelAndView();
-        User bela = new User("Bela", "Lakatos", "asdfgh", "LBeci", "LBela@gmail.com");
-        modelAndView.addObject("model", bela);
         modelAndView.setViewName("hello");
         return modelAndView;
     }
