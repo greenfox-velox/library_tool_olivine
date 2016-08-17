@@ -15,8 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home", "/registration", "/users").permitAll()
-//                .antMatchers("/style/**","/fonts/**","/libs/**").permitAll()
+                .antMatchers("/", "/home", "/registration", "/users", "/css/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -35,4 +34,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .password("asdasd")
                 .roles("USER");
     }
+
+//    @Autowired
+//    DriverManagerDataSource getDatasource;
+//
+//    @Autowired
+//    public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.jdbcAuthentication().dataSource(getDatasource)
+//                .usersByUsernameQuery("select userName, password from users where userName = ?" );
+//    }
+
 }
+

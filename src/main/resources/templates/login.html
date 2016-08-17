@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
 <head>
-    <title>Spring Security Example </title>
+    <title>Library Tool </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 
 </head>
+
 <body>
 
 <div class="container">
@@ -14,7 +17,7 @@
 
         <p class="alert alert-danger" role="alert"  th:if="${param.error}" >
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            Invalid username and email
+            The username or password you have entered is invalid, try again.
         </p>
 
         <p class="alert alert-danger" role="alert"  th:if="${param.logout}" >
@@ -28,12 +31,14 @@
 
         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In"/>
 
+        <p><a href="/registration">Register a new account</a></p>
+
     </form>
 </div>
 
-<a href="/registration">Register a new account</a>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </body>
 </html>

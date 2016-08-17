@@ -20,6 +20,7 @@ public class JDBCTemplate {
         jdbcTemplateObject = new JdbcTemplate(dataSource);
     }
 
+//    @Bean
     public DriverManagerDataSource getDatasource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         try {
