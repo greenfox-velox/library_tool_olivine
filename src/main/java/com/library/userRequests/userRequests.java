@@ -5,6 +5,8 @@ import com.library.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.session.SessionProperties;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 
 import javax.sql.DataSource;
 
@@ -19,18 +21,15 @@ public class userRequests {
         template = new JdbcTemplate(ds);
 
     }
-//
-//    public String registrationValidation(User regUser) {
-//        return registerUser(regUser);
-//    }
 
-    public String registerUser(User user) {
+
+        public boolean registerUser(User user) {
         if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
             String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
             template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
-            return "welcome";
+            return true;
         } else {
-            return "registration";
+            return false;
         }
     }
 
@@ -43,10 +42,17 @@ public class userRequests {
         return true;
     }
 
+
     public boolean passwordCheck(User user) {
         return user.getPassword().equals(user.getConfPassword());
     }
 
+    public boolean resultHasErrors(BindingResult result) {
+        if (result.hasErrors()) {
+            return true;
+        }
+        return false;
+    }
 
 
 }
