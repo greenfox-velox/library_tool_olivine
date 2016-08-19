@@ -1,4 +1,4 @@
-package com.library.UserRequests;
+package com.library.userRequests;
 
 //import com.library.config.JDBCTemplate;
 import com.library.model.User;
