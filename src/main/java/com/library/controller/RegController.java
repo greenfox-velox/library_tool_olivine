@@ -1,7 +1,6 @@
 package com.library.controller;
 
 import com.library.userRequests.*;
-//import unused.validator.Validator;
 import com.library.model.User;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class RegController {
     private static final Logger logger = Logger.getLogger(RegController.class);
 
     @Autowired
-    UserRequests ur;
+    UserRequests userRequest;
 
     @RequestMapping(value="/registration", method=RequestMethod.GET)
     public ModelAndView registrationForm() {
@@ -33,11 +32,13 @@ public class RegController {
 
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String regSubmit(@Valid @ModelAttribute("user") User user, BindingResult result) {
-        ur.validate(user, result);
+        userRequest.validate(user, result);
         if (result.hasErrors()) {
+            logger.info("Registration form contains errors");
             return "registration";
         } else {
-            ur.registerUser(user);
+            userRequest.registerUser(user);
+            logger.info("User registered successfully");
             return "redirect:/login";
         }
     }
