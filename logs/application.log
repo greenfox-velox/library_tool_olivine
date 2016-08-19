@@ -1148,33 +1148,34 @@ java.lang.Exception: Testing
 2016-08-12 14:19:16 INFO  libController:38 - Navigated to Welcome site
 2016-08-12 14:19:18 INFO  libController:27 - Registration page loaded
 2016-08-12 14:19:25 INFO  libController:38 - Navigated to Welcome site
-2016-08-12 15:13:06 INFO  libController:28 - Registration page loaded
-2016-08-12 15:15:01 INFO  libController:28 - Registration page loaded
-2016-08-12 15:15:05 ERROR libController:36 - Something went wrong
-2016-08-12 15:15:53 INFO  libController:28 - Registration page loaded
-2016-08-12 15:15:56 ERROR libController:36 - Something went wrong
-2016-08-12 15:16:17 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:16:21 INFO  libController:28 - Registration page loaded
-2016-08-12 15:16:38 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:18:09 INFO  libController:28 - Registration page loaded
-2016-08-12 15:18:11 ERROR libController:36 - Something went wrong
-2016-08-12 15:18:18 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:18:20 INFO  libController:28 - Registration page loaded
-2016-08-12 15:18:27 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:19:40 INFO  libController:28 - Registration page loaded
-2016-08-12 15:21:09 INFO  libController:28 - Registration page loaded
-2016-08-12 15:21:19 ERROR libController:36 - Something went wrong
-2016-08-12 15:22:44 INFO  libController:28 - Registration page loaded
-2016-08-12 15:22:44 ERROR libController:36 - Something went wrong
-2016-08-12 15:22:44 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:22:45 INFO  libController:28 - Registration page loaded
-2016-08-12 15:22:45 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:22:46 ERROR libController:36 - Something went wrong
-2016-08-12 15:26:37 INFO  libController:28 - Registration page loaded
-2016-08-12 15:26:43 ERROR libController:36 - Something went wrong
-2016-08-12 15:27:35 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:27:37 INFO  libController:28 - Registration page loaded
-2016-08-12 15:27:55 INFO  libController:39 - Navigated to Welcome site
-2016-08-12 15:28:15 INFO  libController:28 - Registration page loaded
-2016-08-12 15:28:16 ERROR libController:36 - Something went wrong
-2016-08-12 15:28:16 INFO  libController:39 - Navigated to Welcome site
+2016-08-12 15:15:38 INFO  libController:28 - Registration page loaded
+2016-08-15 09:07:52 INFO  libController:28 - Registration page loaded
+2016-08-15 09:24:20 INFO  libController:28 - Registration page loaded
+2016-08-15 09:39:45 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:05:19 INFO  libController:28 - Registration page loaded
+2016-08-15 10:13:22 INFO  libController:28 - Registration page loaded
+2016-08-15 10:13:53 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:17:33 INFO  libController:28 - Registration page loaded
+2016-08-15 10:17:53 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:40:17 INFO  libController:28 - Registration page loaded
+2016-08-15 10:40:17 INFO  libController:28 - Registration page loaded
+2016-08-15 10:41:07 INFO  libController:39 - Navigated to Welcome site
+2016-08-15 10:42:02 INFO  libController:28 - Registration page loaded
+2016-08-17 10:58:03 INFO  RegController:30 - Registration page loaded
+2016-08-17 10:58:10 INFO  RegController:30 - Registration page loaded
+2016-08-17 10:58:42 INFO  RegController:30 - Registration page loaded
+2016-08-17 11:05:36 INFO  RegController:28 - Registration page loaded
+2016-08-17 11:05:39 INFO  RegController:28 - Registration page loaded
+2016-08-17 11:05:41 INFO  RegController:28 - Registration page loaded
+2016-08-17 11:06:07 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:30:20 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:42:00 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:42:43 INFO  RegController:48 - Navigated to Welcome site
+2016-08-17 12:43:44 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:43:50 ERROR RegController:45 - Something went wrong
+2016-08-17 12:44:02 INFO  RegController:48 - Navigated to Welcome site
+2016-08-17 12:44:37 INFO  RegController:48 - Navigated to Welcome site
+2016-08-17 12:44:43 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:47:50 INFO  RegController:28 - Registration page loaded
+2016-08-17 12:48:11 INFO  RegController:41 - Navigated to Welcome site
+2016-08-17 21:30:53 INFO  RegController:28 - Registration page loaded

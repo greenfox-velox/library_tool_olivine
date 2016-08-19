@@ -14,7 +14,7 @@
 
         <p class="alert alert-danger" role="alert"  th:if="${param.error}" >
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            Invalid username and email
+            Invalid username or password
         </p>
 
         <p class="alert alert-danger" role="alert"  th:if="${param.logout}" >
@@ -22,7 +22,7 @@
             You have been logged out.
         </p>
 
-        <input class="form-control" type="text" name="username" autofocus="autofocus" placeholder="Your username"/>
+        <input class="form-control" type="text" name="userName" autofocus="autofocus" placeholder="Your username"/>
 
         <input class="form-control" type="password" name="password" autofocus="autofocus" placeholder="Your password"/>
 
