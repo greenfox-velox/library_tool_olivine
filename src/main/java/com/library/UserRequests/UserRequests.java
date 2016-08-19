@@ -1,37 +1,29 @@
-package com.library.userRequests;
+package com.library.UserRequests;
 
 //import com.library.config.JDBCTemplate;
 import com.library.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.session.SessionProperties;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
+import org.springframework.validation.FieldError;
 
 import javax.sql.DataSource;
 
 /**
  * Created by Attila on 15/08/2016.
  */
-public class userRequests {
+public class UserRequests {
 
     JdbcTemplate template;
 
-    public userRequests(DataSource ds) {
+    public UserRequests(DataSource ds) {
         template = new JdbcTemplate(ds);
 
     }
 
-
-        public boolean registerUser(User user) {
-        if (isUsernameFree(user.getUserName()) && passwordCheck(user)) {
+        public void registerUser(User user) {
             String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
             template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
-            return true;
-        } else {
-            return false;
         }
-    }
 
     public boolean isUsernameFree(String userName) {
         for (User user : template.query("select * from users", new UserMapper())) {
@@ -43,15 +35,19 @@ public class userRequests {
     }
 
 
-    public boolean passwordCheck(User user) {
+    public boolean passwordEqualsConfPassword(User user) {
         return user.getPassword().equals(user.getConfPassword());
     }
 
-    public boolean resultHasErrors(BindingResult result) {
-        if (result.hasErrors()) {
-            return true;
+    public void validate(User user, BindingResult result) {
+        if (!isUsernameFree(user.getUserName())) {
+            FieldError error = new FieldError("user", "userName", "This username is already in use");
+            result.addError(error);
         }
-        return false;
+        if (!passwordEqualsConfPassword(user)) {
+            FieldError error = new FieldError("user", "password", "The passwords provided don't match");
+            result.addError(error);
+        }
     }
 
 

@@ -1,4 +1,4 @@
-package com.library.userRequests;
+package com.library.UserRequests;
 
 import com.library.model.User;
 import org.springframework.jdbc.core.RowMapper;
