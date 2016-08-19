@@ -1,6 +1,6 @@
 package com.library.controller;
 
-import com.library.UserRequests.*;
+import com.library.userRequests.*;
 //import unused.validator.Validator;
 import com.library.model.User;
 import org.apache.log4j.Logger;
@@ -38,7 +38,7 @@ public class RegController {
             return "registration";
         } else {
             ur.registerUser(user);
-            return "welcome";
+            return "redirect:/login";
         }
     }
 
