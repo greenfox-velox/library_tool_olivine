@@ -1179,3 +1179,7 @@ java.lang.Exception: Testing
 2016-08-17 12:47:50 INFO  RegController:28 - Registration page loaded
 2016-08-17 12:48:11 INFO  RegController:41 - Navigated to Welcome site
 2016-08-17 21:30:53 INFO  RegController:28 - Registration page loaded
+2016-08-18 12:47:32 INFO  RegController:28 - Registration page loaded
+2016-08-18 12:51:10 INFO  RegController:28 - Registration page loaded
+2016-08-18 12:52:26 INFO  RegController:28 - Registration page loaded
+2016-08-19 08:11:48 INFO  RegController:28 - Registration page loaded
