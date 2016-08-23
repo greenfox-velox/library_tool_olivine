@@ -1179,21 +1179,6 @@ java.lang.Exception: Testing
 2016-08-17 12:47:50 INFO  RegController:28 - Registration page loaded
 2016-08-17 12:48:11 INFO  RegController:41 - Navigated to Welcome site
 2016-08-17 21:30:53 INFO  RegController:28 - Registration page loaded
-<<<<<<< HEAD
-2016-08-18 13:06:41 INFO  RegController:28 - Registration page loaded
-2016-08-18 13:08:20 INFO  RegController:44 - Navigated to Welcome site
-2016-08-18 13:08:22 INFO  RegController:28 - Registration page loaded
-2016-08-18 13:08:28 ERROR RegController:41 - Something went wrong (invalid userName, f*cker!)
-2016-08-18 13:08:37 ERROR RegController:41 - Something went wrong (invalid userName, f*cker!)
-2016-08-18 13:55:57 INFO  RegController:28 - Registration page loaded
-2016-08-18 13:56:20 INFO  RegController:28 - Registration page loaded
-2016-08-18 13:57:06 INFO  RegController:28 - Registration page loaded
-2016-08-18 13:58:19 INFO  RegController:28 - Registration page loaded
-2016-08-18 14:46:09 INFO  RegController:26 - Registration page loaded
-2016-08-18 14:48:10 INFO  RegController:26 - Registration page loaded
-2016-08-18 23:19:57 INFO  RegController:26 - Registration page loaded
-2016-08-18 23:23:05 INFO  RegController:26 - Registration page loaded
-=======
 2016-08-18 12:47:32 INFO  RegController:28 - Registration page loaded
 2016-08-18 12:51:10 INFO  RegController:28 - Registration page loaded
 2016-08-18 12:52:26 INFO  RegController:28 - Registration page loaded
@@ -1204,4 +1189,3 @@ java.lang.Exception: Testing
 2016-08-19 10:36:09 INFO  RegController:27 - Registration page loaded
 2016-08-19 10:37:16 INFO  RegController:27 - Registration page loaded
 2016-08-19 10:49:53 INFO  RegController:27 - Registration page loaded
->>>>>>> development
