@@ -1,12 +1,10 @@
 package com.library.controller;
 
-import com.library.userRequests.*;
-//import unused.validator.Validator;
 import com.library.model.User;
+import com.library.userRequests.UserRequests;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +19,7 @@ public class RegController {
     private static final Logger logger = Logger.getLogger(RegController.class);
 
     @Autowired
-    userRequests ur;
+    UserRequests ur;
 
     @RequestMapping(value="/registration", method=RequestMethod.GET)
     public ModelAndView registrationForm() {
@@ -33,19 +31,14 @@ public class RegController {
     }
 
     @RequestMapping(value="/registration", method=RequestMethod.POST)
-    public ModelAndView regSubmit(@Valid @ModelAttribute("user") User user, BindingResult result) {
-        ModelAndView modelAndView = new ModelAndView();
-        boolean userIsValid = ur.registerUser(user);
-        ur.resultHasErrors(result);
-        if (!userIsValid) {
-            logger.error("Something went wrong (invalid userName, f*cker!)");
-            modelAndView.setViewName("registration");
-        } else {
-            logger.info("Navigated to Welcome site");
-            modelAndView.setViewName("welcome");
+    public String regSubmit(@Valid @ModelAttribute("user") User user, BindingResult result) {
+        ur.userValidator(user, result);
+        if (result.hasErrors()){
+            return "registration";
+        } else{
+            ur.registerUser(user);
+            return "redirect:/login";
         }
-        return modelAndView;
+
     }
-
-
 }

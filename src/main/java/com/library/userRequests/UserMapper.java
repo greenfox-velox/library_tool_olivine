@@ -6,9 +6,6 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by Attila on 2016.08.02..
- */
 
 //returns the users from DB one by one in a model object with userName, email and password in the constructor
 

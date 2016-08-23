@@ -2,11 +2,11 @@
 //
 //
 //import com.library.model.User;
-//import com.library.userRequests.userRequests;
+//import com.library.UserRequests.UserRequests;
 //
 //public class Validator {
 //
-//    userRequests requests = new userRequests();
+//    UserRequests requests = new UserRequests();
 //
 //    public String registrationValidation(User regUser) {
 //        return requests.registerUser(regUser);
