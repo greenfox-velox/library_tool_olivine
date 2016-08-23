@@ -32,13 +32,12 @@ public class RegController {
 
     @RequestMapping(value="/registration", method=RequestMethod.POST)
     public String regSubmit(@Valid @ModelAttribute("user") User user, BindingResult result) {
-        ur.userValidator(user, result);
-        if (result.hasErrors()){
+        ur.validate(user, result);
+        if (result.hasErrors()) {
             return "registration";
-        } else{
+        } else {
             ur.registerUser(user);
             return "redirect:/login";
         }
-
     }
 }

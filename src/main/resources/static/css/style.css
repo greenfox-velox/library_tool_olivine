@@ -2,8 +2,10 @@
      width: 40%;
      }
 
- body {
+body {
     background-image: url("background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
- }
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+}

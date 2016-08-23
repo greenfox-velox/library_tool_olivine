@@ -1,7 +1,7 @@
 2016-08-12 11:34:34 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:34:34 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -94,7 +94,7 @@ java.lang.Exception: Testing
 2016-08-12 11:34:51 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:34:51 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,7 +187,7 @@ java.lang.Exception: Testing
 2016-08-12 11:35:33 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:35:33 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -280,7 +280,7 @@ java.lang.Exception: Testing
 2016-08-12 11:38:17 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:38:17 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -373,7 +373,7 @@ java.lang.Exception: Testing
 2016-08-12 11:43:07 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:43:07 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -466,7 +466,7 @@ java.lang.Exception: Testing
 2016-08-12 11:44:24 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:44:24 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -559,7 +559,7 @@ java.lang.Exception: Testing
 2016-08-12 11:45:02 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:45:02 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -652,7 +652,7 @@ java.lang.Exception: Testing
 2016-08-12 11:46:06 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:46:06 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -745,7 +745,7 @@ java.lang.Exception: Testing
 2016-08-12 11:47:06 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:47:06 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -838,7 +838,7 @@ java.lang.Exception: Testing
 2016-08-12 11:50:30 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:50:30 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -931,7 +931,7 @@ java.lang.Exception: Testing
 2016-08-12 11:51:56 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:51:56 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1024,7 +1024,7 @@ java.lang.Exception: Testing
 2016-08-12 11:52:11 DEBUG libController:30 - getWelcome is executed!
 2016-08-12 11:52:11 ERROR libController:34 - This is Error message
 java.lang.Exception: Testing
-	at com.library.controller.RegController.registrationForm(libController.java:34)
+	at com.library.controller.libController.registrationForm(libController.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1179,6 +1179,7 @@ java.lang.Exception: Testing
 2016-08-17 12:47:50 INFO  RegController:28 - Registration page loaded
 2016-08-17 12:48:11 INFO  RegController:41 - Navigated to Welcome site
 2016-08-17 21:30:53 INFO  RegController:28 - Registration page loaded
+<<<<<<< HEAD
 2016-08-18 13:06:41 INFO  RegController:28 - Registration page loaded
 2016-08-18 13:08:20 INFO  RegController:44 - Navigated to Welcome site
 2016-08-18 13:08:22 INFO  RegController:28 - Registration page loaded
@@ -1192,3 +1193,15 @@ java.lang.Exception: Testing
 2016-08-18 14:48:10 INFO  RegController:26 - Registration page loaded
 2016-08-18 23:19:57 INFO  RegController:26 - Registration page loaded
 2016-08-18 23:23:05 INFO  RegController:26 - Registration page loaded
+=======
+2016-08-18 12:47:32 INFO  RegController:28 - Registration page loaded
+2016-08-18 12:51:10 INFO  RegController:28 - Registration page loaded
+2016-08-18 12:52:26 INFO  RegController:28 - Registration page loaded
+2016-08-19 08:11:48 INFO  RegController:28 - Registration page loaded
+2016-08-19 09:50:52 INFO  RegController:27 - Registration page loaded
+2016-08-19 10:34:25 INFO  RegController:27 - Registration page loaded
+2016-08-19 10:35:37 INFO  RegController:27 - Registration page loaded
+2016-08-19 10:36:09 INFO  RegController:27 - Registration page loaded
+2016-08-19 10:37:16 INFO  RegController:27 - Registration page loaded
+2016-08-19 10:49:53 INFO  RegController:27 - Registration page loaded
+>>>>>>> development

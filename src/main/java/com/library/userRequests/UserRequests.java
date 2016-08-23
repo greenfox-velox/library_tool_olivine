@@ -1,5 +1,6 @@
 package com.library.userRequests;
 
+//import com.library.config.JDBCTemplate;
 import com.library.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.validation.BindingResult;
@@ -7,30 +8,22 @@ import org.springframework.validation.FieldError;
 
 import javax.sql.DataSource;
 
+/**
+ * Created by Attila on 15/08/2016.
+ */
 public class UserRequests {
 
     JdbcTemplate template;
 
     public UserRequests(DataSource ds) {
         template = new JdbcTemplate(ds);
+
     }
 
-    public void userValidator(User user, BindingResult result){
-        if(!isUsernameFree(user.getUserName())){
-            FieldError error = new FieldError("user", "userName", "This username is already exists");
-            result.addError(error);
+        public void registerUser(User user) {
+            String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
+            template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
         }
-        if(!passwordCheck(user)){
-            FieldError error = new FieldError("user", "password", "Password is not same as conf pass");
-            result.addError(error);
-        }
-    }
-
-    public void registerUser(User user) {
-        String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
-        template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
-    }
-
 
     public boolean isUsernameFree(String userName) {
         for (User user : template.query("select * from users", new UserMapper())) {
@@ -42,8 +35,19 @@ public class UserRequests {
     }
 
 
-    public boolean passwordCheck(User user) {
+    public boolean passwordEqualsConfPassword(User user) {
         return user.getPassword().equals(user.getConfPassword());
+    }
+
+    public void validate(User user, BindingResult result) {
+        if (!isUsernameFree(user.getUserName())) {
+            FieldError error = new FieldError("user", "userName", "This username is already in use");
+            result.addError(error);
+        }
+        if (!passwordEqualsConfPassword(user)) {
+            FieldError error = new FieldError("user", "password", "The passwords provided don't match");
+            result.addError(error);
+        }
     }
 
 
