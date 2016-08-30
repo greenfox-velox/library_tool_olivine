@@ -1183,3 +1183,6 @@ java.lang.Exception: Testing
 2016-08-18 12:51:10 INFO  RegController:28 - Registration page loaded
 2016-08-18 12:52:26 INFO  RegController:28 - Registration page loaded
 2016-08-19 08:11:48 INFO  RegController:28 - Registration page loaded
+2016-08-19 10:31:26 INFO  RegController:27 - Registration page loaded
+2016-08-19 11:10:31 INFO  RegController:27 - Registration page loaded
+2016-08-30 09:31:16 INFO  RegController:27 - Registration page loaded

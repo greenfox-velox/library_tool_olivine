@@ -19,7 +19,8 @@ public class DatabaseConfig {
     public HashMap<String,String> setUrlForDataSource() {
         HashMap<String,String> myUrl = new HashMap<String,String>();
         try {
-            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+//            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+            URI dbUri = new URI("mysql://root:password@localhost:3306/heroku_1230023ab8a6ac8");
             myUrl.put("username", dbUri.getUserInfo().split(":")[0]);
             myUrl.put("password", dbUri.getUserInfo().split(":")[1]);
             myUrl.put("dbUrl", "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath());
