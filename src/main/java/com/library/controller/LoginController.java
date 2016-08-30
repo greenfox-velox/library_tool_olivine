@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
+import static com.library.securityUtil.SecurityUtil.hasRole;
+
 @Controller
 public class LoginController {
 
@@ -16,10 +20,25 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/welcome")
-    public ModelAndView hello() {
+    public ModelAndView hello(HttpServletRequest request) {
+        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("hello");
+        if (hasRole("user")) {
+            modelAndView.setViewName("hello");
+        }else {
+            modelAndView.setViewName("welcome");
+        }
         return modelAndView;
     }
 
 }
+//
+//    public String successFulLogin() {
+//        if (validation.hasRole("ADMIN")) {
+//            return "redirect:/admin";
+//        }
+//        else {
+//            return "redirect:/user";
+//        }
+//    }
+//}
