@@ -1,8 +1,7 @@
 package com.library.controller;
 
-import com.library.UserRequests.*;
-//import unused.validator.Validator;
 import com.library.model.User;
+import com.library.userRequests.UserRequests;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,8 +37,7 @@ public class RegController {
             return "registration";
         } else {
             ur.registerUser(user);
-            return "welcome";
+            return "redirect:/login";
         }
     }
-
 }

@@ -3,10 +3,16 @@
 <head>
     <title>Welcome to the Library</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-<h1>Welcome to Americana!!!!</h1>
-
-<a href="/login">Login here!</a>
+    <div class="container">
+        <h1 th:inline="text">Hello admin, you are in!</h1>
+        <p th:text="'Hello ' + ${user.userName}" />
+        <div class="links">
+            <a class="userList" href="/users">User List</a>
+            <a class="bookList" href="/books">Book List</a>
+        </div>
+    </div>
 </body>
 </html>

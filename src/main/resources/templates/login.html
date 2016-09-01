@@ -2,15 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Spring Security Example </title>
+    <title>Login to Library tool</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
+<header>
+    <div class="head">
+    <div class="title">LIBRARY TOOL</div>
+    <div class="uj">
+        <a href="/login" class="reg active">login</a>
+        <a href="/registration" class="reg">register</a>
+    </div>
+    </div>
+</header>
+
+<!--<ul>-->
+    <!--<li class="toleft">LIBRARY TOOL</li>-->
+    <!--<li class="toright"><a class="active" href="/login">login</a></li>-->
+    <!--<li class="toright"><a href="/registration">register</a></li>-->
+<!--</ul>-->
 
 <div class="container">
+    <div class="colors">
+        <div class="dark-blue"></div>
+        <div class="light-blue"></div>
+        <div class="yellow"></div>
+        <div class="red"></div>
+    </div>
     <form class="form-horizontal" action="#" th:action="@{/login}" method="post">
-        <h2 class="form-signin-heading">Login</h2>
+        <!--<h2 class="form-signin-heading">Login</h2>-->
 
         <p class="alert alert-danger" role="alert"  th:if="${param.error}" >
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -22,16 +43,15 @@
             You have been logged out.
         </p>
 
-        <input class="form-control" type="text" name="userName" autofocus="autofocus" placeholder="Your username"/>
+        <input class="form-control" type="text" name="userName" placeholder="Username"/>
 
-        <input class="form-control" type="password" name="password" autofocus="autofocus" placeholder="Your password"/>
+        <input class="form-control" type="password" name="password" placeholder="Password"/>
 
-        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In"/>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="SIGN IN"/>
 
     </form>
+    <!--<a href="/registration" class="reg">Register a new account</a>-->
 </div>
-
-<a href="/registration">Register a new account</a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

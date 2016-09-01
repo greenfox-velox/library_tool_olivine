@@ -1,6 +1,6 @@
 package com.library.config;
 
-import com.library.UserRequests.UserRequests;
+import com.library.userRequests.UserRequests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -10,9 +10,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 
-/**
- * Created by Attila on 16/08/2016.
- */
 @Configuration
 public class DatabaseConfig {
 
@@ -20,7 +17,10 @@ public class DatabaseConfig {
         HashMap<String,String> myUrl = new HashMap<String,String>();
         try {
 //            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
-            URI dbUri = new URI("mysql://root:password@localhost:3306/heroku_1230023ab8a6ac8");
+//            URI dbUri = new URI("mysql://root:password@localhost:3306/heroku_1230023ab8a6ac8");
+            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8");
+
+            mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true
             myUrl.put("username", dbUri.getUserInfo().split(":")[0]);
             myUrl.put("password", dbUri.getUserInfo().split(":")[1]);
             myUrl.put("dbUrl", "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath());
