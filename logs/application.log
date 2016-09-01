@@ -1189,18 +1189,6 @@ java.lang.Exception: Testing
 2016-08-19 10:36:09 INFO  RegController:27 - Registration page loaded
 2016-08-19 10:37:16 INFO  RegController:27 - Registration page loaded
 2016-08-19 10:49:53 INFO  RegController:27 - Registration page loaded
-<<<<<<< HEAD
-2016-08-19 13:44:54 INFO  RegController:21 - Login page loaded
-2016-08-19 13:45:09 INFO  RegController:29 - Welcome page loaded
-2016-08-19 13:45:15 INFO  RegController:21 - Login page loaded
-2016-08-19 13:45:55 INFO  RegController:26 - Registration page loaded
-2016-08-19 13:46:15 INFO  RegController:41 - User registered successfully
-2016-08-19 13:46:15 INFO  RegController:21 - Login page loaded
-2016-08-19 15:01:37 INFO  RegController:21 - Login page loaded
-2016-08-19 15:01:50 INFO  RegController:29 - Welcome page loaded
-2016-08-19 15:01:53 INFO  RegController:21 - Login page loaded
-2016-08-19 15:01:58 INFO  RegController:26 - Registration page loaded
-=======
 2016-08-23 14:52:23 INFO  RegController:26 - Registration page loaded
 2016-08-23 14:52:54 INFO  RegController:26 - Registration page loaded
 2016-08-23 15:28:29 INFO  RegController:26 - Registration page loaded
@@ -1259,4 +1247,12 @@ java.lang.Exception: Testing
 2016-08-26 17:24:53 INFO  RegController:26 - Registration page loaded
 2016-08-27 10:31:03 INFO  RegController:26 - Registration page loaded
 2016-08-30 10:16:28 INFO  RegController:26 - Registration page loaded
->>>>>>> 856fee0353d72cd584c70498240579da4313aac0
+2016-08-30 11:50:15 INFO  RegController:26 - Registration page loaded
+2016-08-30 11:50:24 INFO  RegController:26 - Registration page loaded
+2016-08-31 16:23:38 INFO  RegController:26 - Registration page loaded
+2016-08-31 16:24:21 INFO  RegController:26 - Registration page loaded
+2016-09-01 10:50:15 INFO  RegController:26 - Registration page loaded
+2016-09-01 10:50:36 INFO  RegController:26 - Registration page loaded
+2016-09-01 10:50:44 INFO  RegController:26 - Registration page loaded
+2016-09-01 11:17:43 INFO  RegController:26 - Registration page loaded
+2016-09-01 11:20:27 INFO  RegController:26 - Registration page loaded

@@ -17,6 +17,7 @@ apply plugin: 'spring-boot'
 apply plugin: 'flyway'
 
 def MIG_PW = System.getenv('MIG_PW')
+//def MIG_PW = "password"
 
 flyway {
     url = 'jdbc:mysql://localhost:3306'

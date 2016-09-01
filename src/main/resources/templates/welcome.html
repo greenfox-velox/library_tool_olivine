@@ -6,13 +6,13 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-<!--<h1>Hello admin!</h1>-->
-<!--<a href="/login">Login here!</a>-->
-<div class="container">
-<h1 th:inline="text">Hello admin, you are in!</h1>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
-</div>
+    <div class="container">
+        <h1 th:inline="text">Hello admin, you are in!</h1>
+        <p th:text="'Hello ' + ${user.userName}" />
+        <div class="links">
+            <a class="userList" href="/users">User List</a>
+            <a class="bookList" href="/books">Book List</a>
+        </div>
+    </div>
 </body>
 </html>
