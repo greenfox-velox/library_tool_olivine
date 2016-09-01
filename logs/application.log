@@ -1199,3 +1199,13 @@ java.lang.Exception: Testing
 2016-08-19 15:01:50 INFO  RegController:29 - Welcome page loaded
 2016-08-19 15:01:53 INFO  RegController:21 - Login page loaded
 2016-08-19 15:01:58 INFO  RegController:26 - Registration page loaded
+2016-08-22 08:22:25 INFO  RegController:21 - Login page loaded
+2016-08-22 08:22:45 INFO  RegController:29 - Welcome page loaded
+2016-08-22 08:22:48 INFO  RegController:21 - Login page loaded
+2016-08-22 08:22:49 INFO  RegController:26 - Registration page loaded
+2016-08-23 10:03:14 INFO  RegController:21 - Login page loaded
+2016-08-23 14:29:04 INFO  RegController:21 - Login page loaded
+2016-08-23 14:45:57 INFO  RegController:21 - Login page loaded
+2016-08-23 14:45:59 INFO  RegController:26 - Registration page loaded
+2016-08-23 14:46:00 INFO  RegController:21 - Login page loaded
+2016-08-23 14:46:06 INFO  RegController:29 - Welcome page loaded
