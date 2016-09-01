@@ -10,9 +10,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 
-/**
- * Created by Attila on 16/08/2016.
- */
 @Configuration
 public class DatabaseConfig {
 
