@@ -3,9 +3,20 @@
 <head>
     <title>Welcome to the Library</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
+<header>
+    <div class="head">
+        <div class="title">LIBRARY TOOL</div>
+        <div class="uj">
+            <a href="/books" class="reg">books</a>
+            <a href="/borrowings" class="reg">borrowings</a>
+            <a href="/logout" class="reg">logout</a>
+        </div>
+    </div>
+</header>
 <!--<h1>Hello admin!</h1>-->
 <!--<a href="/login">Login here!</a>-->
 <div class="container">
