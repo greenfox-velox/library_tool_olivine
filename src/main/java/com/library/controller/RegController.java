@@ -40,4 +40,5 @@ public class RegController {
             return "redirect:/login";
         }
     }
+
 }
