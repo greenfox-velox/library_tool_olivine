@@ -4,6 +4,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 public class Book {
 
+    private int book_id;
+
     @NotEmpty(message = "Please enter the title of the book")
     private String bookTitle;
 
@@ -37,6 +39,10 @@ public class Book {
     }
 
     public Book() {}
+
+    public void setBook_id(int book_id) {
+        this.book_id = book_id;
+    }
 
     public void setBookTitle(String bookTitle) {
         this.bookTitle = bookTitle;
@@ -80,6 +86,10 @@ public class Book {
 
     public void setBookIsBorrowed(Boolean bookIsBorrowed) {
         this.bookIsBorrowed = bookIsBorrowed;
+    }
+
+    public int getBook_id() {
+        return book_id;
     }
 
     public String getbookTitle() {return bookTitle;}

@@ -7,6 +7,8 @@ import javax.validation.constraints.Size;
 
 public class User {
 
+    private int user_id;
+
     @NotEmpty(message = "Please enter your first name")
     private String firstName;
 
@@ -42,11 +44,18 @@ public class User {
         this.role = "user"; //override in DB for "admin" if needed
     }
 
-    public User() {
-        this.role = "user";
-    }
+    public User() {}
+
+//    public User() {
+//        this.role = "user";
+//    }
 
     //getters
+
+
+    public int getUser_id() {
+        return user_id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -81,6 +90,11 @@ public class User {
     }
 
     //setters
+
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
