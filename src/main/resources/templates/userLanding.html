@@ -3,9 +3,20 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Library Tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
+<header>
+    <div class="head">
+        <div class="title">LIBRARY TOOL</div>
+        <div class="uj">
+            <a href="/books" class="reg">books</a>
+            <a href="/borrowings" class="reg">borrowings</a>
+            <a href="/logout" class="reg">logout</a>
+        </div>
+    </div>
+</header>
 <div class="container">
     <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]], you are in!</h1>
     <form th:action="@{/logout}" method="post">

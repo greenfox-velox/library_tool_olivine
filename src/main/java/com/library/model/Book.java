@@ -1,4 +1,4 @@
-package com.library.model;
+    package com.library.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -17,7 +17,7 @@ public class Book {
 
     private String bookEdition;
     private String bookCover;
-    private Integer bookISBNno;
+    private String bookISBNno;
     private String bookFormat;
     private Integer bookNumberOfPages;
     private String bookInLanguage;
@@ -30,7 +30,7 @@ public class Book {
         this.bookAuthor = bookAuthor;
         this.bookEdition = "";
         this.bookCover = "";
-        this.bookISBNno = 0;
+        this.bookISBNno = "";
         this.bookFormat = "";
         this.bookNumberOfPages = 0;
         this.bookInLanguage = "English";
@@ -64,7 +64,7 @@ public class Book {
         this.bookCover = bookCover;
     }
 
-    public void setBookISBNno(Integer bookISBNno) {
+    public void setBookISBNno(String bookISBNno) {
         this.bookISBNno = bookISBNno;
     }
 
@@ -102,7 +102,7 @@ public class Book {
 
     public String getbookCover() {return bookCover;}
 
-    public Integer getbookISBNno() {return bookISBNno;}
+    public String getbookISBNno() {return bookISBNno;}
 
     public String getbookFormat() {return bookFormat;}
 
