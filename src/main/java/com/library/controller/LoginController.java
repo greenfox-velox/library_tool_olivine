@@ -32,13 +32,4 @@ public class LoginController {
     }
 
 }
-//
-//    public String successFulLogin() {
-//        if (validation.hasRole("ADMIN")) {
-//            return "redirect:/admin";
-//        }
-//        else {
-//            return "redirect:/user";
-//        }
-//    }
-//}
+

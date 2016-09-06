@@ -1,6 +1,7 @@
 package com.library.config;
 
-import com.library.userRequests.UserRequests;
+import com.library.requests.book.BookRequests;
+import com.library.requests.user.UserRequests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -46,4 +47,7 @@ public class DatabaseConfig {
     public UserRequests userRequest() {
         return new UserRequests(dataSource());
     }
+
+    @Bean
+    public BookRequests bookRequests() { return new BookRequests(dataSource()); }
 }

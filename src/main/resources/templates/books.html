@@ -24,21 +24,11 @@
                 <th>Title</th>
                 <th>Author</th>
                 <th>Date of publication</th>
-                <th>ISBN</th>
-                <th>Format</th>
-                <th>Language</th>
-                <th>Description</th>
-                <th>Currently at</th>
             </tr>
-            <tr th:each="book : {$bookList}">
-                <td th:text="{$book.bookTitle}">Title</td>
-                <td th:text="{$book.bookAuthor}">Author</td>
-                <td th:text="{$book.bookPublishedIn}">Date of publication</td>
-                <td th:text="{$book.bookISBNno}">ISBN</td>
-                <td th:text="{$book.bookFormat}">Format</td>
-                <td th:text="{$book.bookInLanguage}">Language</td>
-                <td th:text="{$book.bookDescription}">Description</td>
-                <td th:text="{$book.bookIsBorrowed}">Currently at</td>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.getBookTitle()}">Title</td>
+                <td th:text="${book.getBookAuthor()}">Author</td>
+                <td th:text="${book.getBookPublishedIn()}">Date of publication</td>
             </tr>
         </table>
     </div>

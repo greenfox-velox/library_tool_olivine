@@ -92,25 +92,25 @@ public class Book {
         return book_id;
     }
 
-    public String getbookTitle() {return bookTitle;}
+    public String getBookTitle() {return bookTitle;}
 
-    public Integer getbookPublishedIn() {return bookPublishedIn;}
+    public Integer getBookPublishedIn() {return bookPublishedIn;}
 
-    public String getbookAuthor() {return bookAuthor;}
+    public String getBookAuthor() {return bookAuthor;}
 
-    public String getbookEdition() {return bookEdition;}
+    public String getBookEdition() {return bookEdition;}
 
-    public String getbookCover() {return bookCover;}
+    public String getBookCover() {return bookCover;}
 
-    public String getbookISBNno() {return bookISBNno;}
+    public String getBookISBNno() {return bookISBNno;}
 
-    public String getbookFormat() {return bookFormat;}
+    public String getBookFormat() {return bookFormat;}
 
-    public Integer getbookNumberOfPages() {return bookNumberOfPages;}
+    public Integer getBookNumberOfPages() {return bookNumberOfPages;}
 
-    public String getbookInLanguage() {return bookInLanguage;}
+    public String getBookInLanguage() {return bookInLanguage;}
 
-    public String getbookDescription() {return bookDescription;}
+    public String getBookDescription() {return bookDescription;}
 
     public Boolean getbookIsBorrowed() {return bookIsBorrowed;}
 
