@@ -1,6 +1,7 @@
 package com.library.config;
 
-import com.library.userRequests.UserRequests;
+import com.library.requests.book.BookRequests;
+import com.library.requests.user.UserRequests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -17,8 +18,8 @@ public class DatabaseConfig {
         HashMap<String,String> myUrl = new HashMap<String,String>();
         try {
 //            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
-//            URI dbUri = new URI("mysql://root:password@localhost:3306/heroku_1230023ab8a6ac8");
-            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8");
+            URI dbUri = new URI("mysql://root:alma123@localhost:3306/heroku_1230023ab8a6ac8");
+//            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8");
 
             mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true
             myUrl.put("username", dbUri.getUserInfo().split(":")[0]);
@@ -46,4 +47,7 @@ public class DatabaseConfig {
     public UserRequests userRequest() {
         return new UserRequests(dataSource());
     }
+
+    @Bean
+    public BookRequests bookRequests() { return new BookRequests(dataSource()); }
 }

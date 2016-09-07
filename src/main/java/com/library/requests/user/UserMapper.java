@@ -1,8 +1,7 @@
-package com.library.userRequests;
+package com.library.requests.user;
 
 import com.library.model.User;
 import org.springframework.jdbc.core.RowMapper;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

@@ -1,8 +1,10 @@
-package com.library.model;
+    package com.library.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class Book {
+
+    private int book_id;
 
     @NotEmpty(message = "Please enter the title of the book")
     private String bookTitle;
@@ -15,7 +17,7 @@ public class Book {
 
     private String bookEdition;
     private String bookCover;
-    private Integer bookISBNno;
+    private String bookISBNno;
     private String bookFormat;
     private Integer bookNumberOfPages;
     private String bookInLanguage;
@@ -28,7 +30,7 @@ public class Book {
         this.bookAuthor = bookAuthor;
         this.bookEdition = "";
         this.bookCover = "";
-        this.bookISBNno = 0;
+        this.bookISBNno = "";
         this.bookFormat = "";
         this.bookNumberOfPages = 0;
         this.bookInLanguage = "English";
@@ -37,6 +39,10 @@ public class Book {
     }
 
     public Book() {}
+
+    public void setBook_id(int book_id) {
+        this.book_id = book_id;
+    }
 
     public void setBookTitle(String bookTitle) {
         this.bookTitle = bookTitle;
@@ -58,7 +64,7 @@ public class Book {
         this.bookCover = bookCover;
     }
 
-    public void setBookISBNno(Integer bookISBNno) {
+    public void setBookISBNno(String bookISBNno) {
         this.bookISBNno = bookISBNno;
     }
 
@@ -82,25 +88,29 @@ public class Book {
         this.bookIsBorrowed = bookIsBorrowed;
     }
 
-    public String getbookTitle() {return bookTitle;}
+    public int getBook_id() {
+        return book_id;
+    }
 
-    public Integer getbookPublishedIn() {return bookPublishedIn;}
+    public String getBookTitle() {return bookTitle;}
 
-    public String getbookAuthor() {return bookAuthor;}
+    public Integer getBookPublishedIn() {return bookPublishedIn;}
 
-    public String getbookEdition() {return bookEdition;}
+    public String getBookAuthor() {return bookAuthor;}
 
-    public String getbookCover() {return bookCover;}
+    public String getBookEdition() {return bookEdition;}
 
-    public Integer getbookISBNno() {return bookISBNno;}
+    public String getBookCover() {return bookCover;}
 
-    public String getbookFormat() {return bookFormat;}
+    public String getBookISBNno() {return bookISBNno;}
 
-    public Integer getbookNumberOfPages() {return bookNumberOfPages;}
+    public String getBookFormat() {return bookFormat;}
 
-    public String getbookInLanguage() {return bookInLanguage;}
+    public Integer getBookNumberOfPages() {return bookNumberOfPages;}
 
-    public String getbookDescription() {return bookDescription;}
+    public String getBookInLanguage() {return bookInLanguage;}
+
+    public String getBookDescription() {return bookDescription;}
 
     public Boolean getbookIsBorrowed() {return bookIsBorrowed;}
 
