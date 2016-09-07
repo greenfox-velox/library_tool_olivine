@@ -13,7 +13,9 @@
         <div class="uj">
             <a href="/books" class="reg">books</a>
             <a href="/borrowings" class="reg">borrowings</a>
-            <a href="/logout" class="reg">logout</a>
+            <form th:action="@{/logout}" method="post">
+                <input class="headerLogout" type="submit" value="logout"/>
+            </form>
         </div>
     </div>
 </header>

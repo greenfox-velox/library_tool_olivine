@@ -9,19 +9,19 @@ body {
 }
 
 .head {
-display: flex;
-justify-content: space-between;
-background-color: rgba(255, 255, 255, 0.5);
-height: 100px;
-flex-flow: row;
-align-items: center;
-overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    flex-flow: row;
+    align-items: center;
+    overflow: hidden;
 }
 
 .container {
-margin-top: 120px;
-margin-left: 10%;
-width: 25%;
+    margin-top: 120px;
+    margin-left: 10%;
+    width: 25%;
     background: white;
     border-radius: 5px;
     overflow: hidden;
@@ -29,13 +29,13 @@ width: 25%;
 }
 
 .btn-primary {
-background-color: #01CD6C;
-margin-top: 10px;
+    background-color: #01CD6C;
+    margin-top: 10px;
 }
 
 a {
-display: block;
-font-size: 150%;
+    display: block;
+    font-size: 150%;
     text-align: center;
     padding: 50px;
     color: black;
@@ -52,6 +52,23 @@ text-decoration: none;
 display: flex;
 flex-flow: row;
 align-items: center;
+}
+
+.headerLogout {
+    font-size: 150%;
+    text-align: center;
+    padding: 50px;
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+}
+
+.headerLogout:hover {
+    background-color: #1C3D50;
+    color: white;
+    text-decoration: none;
+
 }
 
 .title {

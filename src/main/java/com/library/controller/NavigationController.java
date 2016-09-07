@@ -15,7 +15,7 @@ public class NavigationController {
     @Autowired
     BookRequests bookRequest;
 
-    @RequestMapping(value = "/books", method= RequestMethod.GET)
+    @RequestMapping(value = "books", method= RequestMethod.GET)
     public ModelAndView books(HttpServletRequest request) {
 //        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
