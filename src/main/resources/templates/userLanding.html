@@ -7,16 +7,7 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-<header>
-    <div class="head">
-        <div class="title">LIBRARY TOOL</div>
-        <div class="uj">
-            <a href="/books" class="reg">books</a>
-            <a href="/borrowings" class="reg">borrowings</a>
-            <a href="/logout" class="reg">logout</a>
-        </div>
-    </div>
-</header>
+<header th:replace="fragments/header :: header"></header>
 <div class="container">
     <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]], you are in!</h1>
     <form th:action="@{/logout}" method="post">

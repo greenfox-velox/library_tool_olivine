@@ -19,7 +19,6 @@ public class NavigationController {
     public ModelAndView books(HttpServletRequest request) {
 //        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
-        System.out.println((bookRequest.listAllBooks()).books);
         modelAndView.addObject("books", (bookRequest.listAllBooks()).books);
         modelAndView.setViewName("books");
         return modelAndView;
