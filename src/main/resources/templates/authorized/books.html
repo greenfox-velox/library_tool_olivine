@@ -12,14 +12,14 @@
     <div class="loggedInContainer">
         <h1>Books</h1>
         <table>
-            <tr>
+            <tr class="tb-header">
                 <th>Title</th>
                 <th>Author</th>
                 <th>Date of publication</th>
                 <th>Borrowed by</th>
                 <th>Borrow now</th>
             </tr>
-            <tr th:each="book : ${books}">
+            <tr class="tb-row" th:each="book : ${books}">
                 <td th:text="${book.getBookTitle()}">Title</td>
                 <td th:text="${book.getBookAuthor()}">Author</td>
                 <td th:text="${book.getBookPublishedIn()}">Date of publication</td>
