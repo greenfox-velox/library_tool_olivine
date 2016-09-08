@@ -13,6 +13,7 @@
             <h1>Result</h1>
             <table>
                 <tr>
+                    <th>User ID</th>
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Username</th>
@@ -23,6 +24,7 @@
                     <th>Edit</th>
                 </tr>
                 <tr th:each="user : ${users}">
+                    <td th:text="${user.user_id}">User ID</td>
                     <td th:text="${user.firstName}">First name</td>
                     <td th:text="${user.lastName}">Last name</td>
                     <td th:text="${user.userName}">Username</td>
@@ -30,8 +32,11 @@
                     <td th:text="${user.role}">Role</td>
                     <td th:text="${user.password}">Password</td>
                     <td th:text="${user.project}">Project</td>
-                    <td th:text="${user.project}">Project</td>
-                    <td><input type="button" th:attr="id='u'+${user.getUser_id()}" value="Edit User"/></td>
+                    <td>
+                        <form th:action="@{/editUser(user_id=${user.getUser_id()})}" method="post"> <!-- ' + '${user.getUser_id()}' -->
+                            <input type="submit" value="Edit user"/>  <!--th:attr="id='u'+${user.getUser_id()}"-->
+                        </form>
+                    </td>
                 </tr>
             </table>
         </div>
