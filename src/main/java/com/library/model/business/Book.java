@@ -1,4 +1,4 @@
-    package com.library.model;
+    package com.library.model.business;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -112,6 +112,6 @@ public class Book {
 
     public String getBookDescription() {return bookDescription;}
 
-    public Boolean getbookIsBorrowed() {return bookIsBorrowed;}
+    public Boolean getBookIsBorrowed() {return bookIsBorrowed;}
 
 }

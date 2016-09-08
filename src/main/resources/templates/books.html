@@ -7,7 +7,7 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
 </head>
     <body>
-    <header th:replace="fragments/header :: header"></header>
+    <header th:replace="fragments/loggedInHeader :: header"></header>
     <div class="container">
         <h1>Books</h1>
         <table>
@@ -15,11 +15,14 @@
                 <th>Title</th>
                 <th>Author</th>
                 <th>Date of publication</th>
+                <th>Borrowed by</th>
+                <th>Borrow now</th>
             </tr>
             <tr th:each="book : ${books}">
                 <td th:text="${book.getBookTitle()}">Title</td>
                 <td th:text="${book.getBookAuthor()}">Author</td>
                 <td th:text="${book.getBookPublishedIn()}">Date of publication</td>
+                <td th:text="${book.getUserName()}">Borrowed by</td>
             </tr>
         </table>
     </div>

@@ -1,6 +1,6 @@
 package com.library.requests.user;
 
-import com.library.model.User;
+import com.library.model.business.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
