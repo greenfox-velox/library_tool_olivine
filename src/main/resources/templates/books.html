@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+    <link th:href="@{/css/books.css}" rel="stylesheet" href="../css/books.css"/>
 </head>
     <body>
     <header th:replace="fragments/loggedInHeader :: header"></header>
@@ -23,6 +24,7 @@
                 <td th:text="${book.getBookAuthor()}">Author</td>
                 <td th:text="${book.getBookPublishedIn()}">Date of publication</td>
                 <td th:text="${book.getUserName()}">Borrowed by</td>
+                <td><input type="button" th:attr="id='n'+${book.getBook_id()}" value="Borrow"/></td>
             </tr>
         </table>
     </div>

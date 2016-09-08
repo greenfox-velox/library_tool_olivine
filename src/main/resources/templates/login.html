@@ -5,24 +5,10 @@
     <title>Login to Library tool</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+    <link th:href="@{/css/login.css}" rel="stylesheet" href="../css/login.css"/>
 </head>
 <body>
-<header>
-    <div class="head">
-    <div class="title">LIBRARY TOOL</div>
-    <div class="uj">
-        <a href="/login" class="reg active">login</a>
-        <a href="/registration" class="reg">register</a>
-    </div>
-    </div>
-</header>
-
-<!--<ul>-->
-    <!--<li class="toleft">LIBRARY TOOL</li>-->
-    <!--<li class="toright"><a class="active" href="/login">login</a></li>-->
-    <!--<li class="toright"><a href="/registration">register</a></li>-->
-<!--</ul>-->
-
+<header th:replace="fragments/unauthorizedHeader :: header"></header>
 <div class="container">
     <div class="colors">
         <div class="dark-blue"></div>
