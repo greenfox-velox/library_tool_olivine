@@ -18,7 +18,7 @@ public class UserRequests {
 
     public void registerUser(User user) {
         String SQL = "insert into users (email, firstName, lastName, role, userName, password) values (?, ?, ?, ?, ?, ?)";
-        template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
+        template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), "user", user.getUserName(), user.getPassword());
     }
 
     public UserList getAllUsers() {

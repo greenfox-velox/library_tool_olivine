@@ -17,12 +17,21 @@
                     <th>Last name</th>
                     <th>Username</th>
                     <th>Email</th>
+                    <th>Role</th>
+                    <th>Password</th>
+                    <th>Project</th>
+                    <th>Edit</th>
                 </tr>
                 <tr th:each="user : ${users}">
                     <td th:text="${user.firstName}">First name</td>
                     <td th:text="${user.lastName}">Last name</td>
                     <td th:text="${user.userName}">Username</td>
                     <td th:text="${user.email}">Email</td>
+                    <td th:text="${user.role}">Role</td>
+                    <td th:text="${user.password}">Password</td>
+                    <td th:text="${user.project}">Project</td>
+                    <td th:text="${user.project}">Project</td>
+                    <td><input type="button" th:attr="id='u'+${user.getUser_id()}" value="Edit User"/></td>
                 </tr>
             </table>
         </div>
