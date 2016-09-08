@@ -20,7 +20,7 @@ public class NavigationController {
 //        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("books", (bookRequest.listAllBooks()).books);
-        modelAndView.setViewName("books");
+        modelAndView.setViewName("authorized/books");
         return modelAndView;
     }
 

@@ -1,6 +1,6 @@
 package com.library.controller;
 
-import com.library.model.User;
+import com.library.model.business.User;
 import com.library.requests.user.UserRequests;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

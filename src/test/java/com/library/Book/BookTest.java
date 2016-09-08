@@ -1,6 +1,6 @@
 package com.library.Book;
 
-import com.library.model.Book;
+import com.library.model.business.Book;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -56,6 +56,6 @@ public class BookTest {
 
     @Test()
     public void testgetbookIsBorrowed(){
-        assertEquals("getbookIsBorrowed should return false" , false, greenfox.getbookIsBorrowed());
+        assertEquals("getbookIsBorrowed should return false" , false, greenfox.getBookIsBorrowed());
     }
 }

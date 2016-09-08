@@ -5,16 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+    <link th:href="@{/css/register.css}" rel="stylesheet" href="../css/register.css"/>
 </head>
-<header>
-    <div class="head">
-        <div class="title">LIBRARY TOOL</div>
-        <div class="uj">
-            <a href="/login" class="reg">login</a>
-            <a href="/registration" class="reg active">register</a>
-        </div>
-    </div>
-</header>
+<header th:replace="fragments/unauthorizedHeader :: header"></header>
 <body>
 
 <div class="container">

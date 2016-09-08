@@ -1,6 +1,6 @@
 package com.library.User;
 
-import com.library.model.User;
+import com.library.model.business.User;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
