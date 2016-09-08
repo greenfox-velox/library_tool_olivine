@@ -1,0 +1,25 @@
+h1 {
+font-size:24px;
+background-color: #E6E9EE;
+margin: 0;
+padding:10px;
+}
+
+.tb-header{
+border-bottom: 3px solid #ddd;
+font-size: 16px;
+}
+
+th {
+padding: 10px;
+}
+
+td {
+padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}

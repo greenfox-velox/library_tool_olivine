@@ -6,13 +6,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
         <link th:href="@{/css/users.css}" rel="stylesheet" href="../css/users.css"/>
+        <link th:href="@{/css/table.css}" rel="stylesheet" href="../css/table.css"/>
     </head>
     <body>
         <header th:replace="fragments/loggedInHeader :: header"></header>
         <div class="loggedInContainer">
             <h1>Result</h1>
             <table>
-                <tr>
+                <tr class="tb-header">
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Username</th>
@@ -29,7 +30,6 @@
                     <td th:text="${user.email}">Email</td>
                     <td th:text="${user.role}">Role</td>
                     <td th:text="${user.password}">Password</td>
-                    <td th:text="${user.project}">Project</td>
                     <td th:text="${user.project}">Project</td>
                     <td><input type="button" th:attr="id='u'+${user.getUser_id()}" value="Edit User"/></td>
                 </tr>
