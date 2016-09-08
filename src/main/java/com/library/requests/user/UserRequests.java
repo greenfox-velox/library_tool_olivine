@@ -1,6 +1,7 @@
 package com.library.requests.user;
 
 import com.library.model.business.User;
+import com.library.model.view.UserList;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -20,8 +21,12 @@ public class UserRequests {
         template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
     }
 
-    public void getUser(User user) {
-
+    public UserList getAllUsers() {
+        UserList userList = new UserList();
+        for (User user :  template.query("SELECT * FROM users", new UserMapper())) {
+            userList.users.add(user);
+        }
+        return userList;
     }
 
     public boolean isUsernameFree(String userName) {

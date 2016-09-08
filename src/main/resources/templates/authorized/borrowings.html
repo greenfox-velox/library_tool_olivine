@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin: Book List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+    <link th:href="@{/css/borrowings.css}" rel="stylesheet" href="../css/books.css"/>
+</head>
+    <body>
+    <header th:replace="fragments/loggedInHeader :: header"></header>
+    <div class="loggedInContainer">
+        <h1>Books</h1>
+        <table>
+            <tr>
+                <th>User Name</th>
+                <th>Book Title</th>
+                <th>Borrowing date</th>
+            </tr>
+            <tr th:each="borrowing : ${borrowings}">
+                <td th:text="${borrowing.getUserName()}">User name</td>
+                <td th:text="${borrowing.getBookTitle()}">Book title</td>
+                <td th:text="${borrowing.getBorrowingDate()}">Borrowing date</td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

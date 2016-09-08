@@ -1,6 +1,7 @@
 package com.library.config;
 
 import com.library.requests.book.BookRequests;
+import com.library.requests.borrowing.BorrowingRequests;
 import com.library.requests.user.UserRequests;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -50,4 +51,7 @@ public class DatabaseConfig {
 
     @Bean
     public BookRequests bookRequests() { return new BookRequests(dataSource()); }
+
+    @Bean
+    public BorrowingRequests borrowingRequests() { return new BorrowingRequests(dataSource()); }
 }

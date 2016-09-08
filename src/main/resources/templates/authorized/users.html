@@ -1,28 +1,30 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Getting Started: Handling Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<h1>Result</h1>
-
-<table>
-    <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Username</th>
-        <th>Email</th>
-    </tr>
-    <tr th:each="user : ${usersList}">
-        <td th:text="${user.firstName}">First name</td>
-        <td th:text="${user.lastName}">Last name</td>
-        <td th:text="${user.userName}">Username</td>
-        <td th:text="${user.email}">Email</td>
-    </tr>
-</table>
-
-
-<a href="/registration">helloooooooo</a>
-</body>
+    <head>
+        <title>Admin: Users List</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+        <link th:href="@{/css/users.css}" rel="stylesheet" href="../css/users.css"/>
+    </head>
+    <body>
+        <header th:replace="fragments/loggedInHeader :: header"></header>
+        <div class="loggedInContainer">
+            <h1>Result</h1>
+            <table>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.firstName}">First name</td>
+                    <td th:text="${user.lastName}">Last name</td>
+                    <td th:text="${user.userName}">Username</td>
+                    <td th:text="${user.email}">Email</td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
