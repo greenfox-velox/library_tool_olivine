@@ -8,11 +8,8 @@
 </head>
 <body>
 <header th:replace="fragments/loggedInHeader :: header"></header>
-<div class="container">
-<h1 th:inline="text">Hello admin, you are in!</h1>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
+<div class="landingContainer">
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]], you are in!</h1>
 </div>
 </body>
 </html>

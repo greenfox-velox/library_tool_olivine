@@ -20,6 +20,10 @@ public class UserRequests {
         template.update(SQL, user.getEmail(), user.getFirstName(), user.getLastName(), user.getRole(), user.getUserName(), user.getPassword());
     }
 
+    public void getUser(User user) {
+
+    }
+
     public boolean isUsernameFree(String userName) {
         for (User user : template.query("select * from users", new UserMapper())) {
             if (user.getUserName().equals(userName)) {

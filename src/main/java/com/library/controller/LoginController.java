@@ -24,9 +24,9 @@ public class LoginController {
         System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
         if (hasRole("user")) {
-            modelAndView.setViewName("userLanding");
+            modelAndView.setViewName("authorized/welcome");
         }else if (hasRole("admin")) {
-            modelAndView.setViewName("adminLanding");
+            modelAndView.setViewName("authorized/welcome");
         }
         return modelAndView;
     }
