@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+    <link th:href="@{/css/register.css}" rel="stylesheet" href="../css/register.css"/>
+</head>
+<header th:replace="fragments/unauthorizedHeader :: header"></header>
+<body>
+
+<div class="container">
+    <div class="colors">
+        <div class="dark-blue"></div>
+        <div class="light-blue"></div>
+        <div class="yellow"></div>
+        <div class="red"></div>
+    </div>
+    <form class="form-horizontal" action="#" th:action="@{/registration}" th:object="${user}" method="post">
+        <!--<h2 class="form-signin-heading">Registration</h2>-->
+
+        <input class="form-control" type="text" th:field="*{firstName}" autofocus="autofocus" placeholder="First name"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Enter your first name</p>
+
+        <input class="form-control" type="text" th:field="*{lastName}" autofocus="autofocus" placeholder="Last name"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Enter your last name</p>
+
+        <input class="form-control" type="text" th:field="*{userName}" placeholder="Username"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Username Error</p>
+
+        <input class="form-control" type="text" th:field="*{email}" autofocus="autofocus" placeholder="Email address"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Enter a valid email address</p>
+
+        <input class="form-control" type="password" th:field="*{password}" placeholder="Password"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Password Error</p>
+
+        <input class="form-control" type="password" th:field="*{confPassword}" placeholder="Password confirmation"/>
+        <p class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('confPassword')}" th:errors="*{confPassword}"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>Password Confirm Error</p>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">REGISTER</button>
+        <!--<button class="btn btn-lg btn-primary btn-block" type="reset">Reset</button>-->
+
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

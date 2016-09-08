@@ -1,0 +1,13 @@
+<header>
+    <div class="head">
+        <div class="title">LIBRARY TOOL</div>
+        <div class="uj">
+            <a href="/users" class="reg usersButton">users</a>
+            <a href="/books" class="reg booksButton">books</a>
+            <a href="/borrowings" class="reg borrowingsButton">borrowings</a>
+            <form th:action="@{/logout}" method="post">
+                <input class="headerLogout" type="submit" value="logout"/>
+            </form>
+        </div>
+    </div>
+</header>

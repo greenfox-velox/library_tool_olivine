@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Admin: Users List</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+        <link th:href="@{/css/users.css}" rel="stylesheet" href="../css/users.css"/>
+        <link th:href="@{/css/table.css}" rel="stylesheet" href="../css/table.css"/>
+    </head>
+    <body>
+        <header th:replace="fragments/loggedInHeader :: header"></header>
+        <div class="loggedInContainer">
+            <h1>Result</h1>
+            <table>
+                <tr class="tb-header">
+                    <th>User ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Password</th>
+                    <th>Project</th>
+                    <th>Edit</th>
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.user_id}">User ID</td>
+                    <td th:text="${user.firstName}">First name</td>
+                    <td th:text="${user.lastName}">Last name</td>
+                    <td th:text="${user.userName}">Username</td>
+                    <td th:text="${user.email}">Email</td>
+                    <td th:text="${user.role}">Role</td>
+                    <td th:text="${user.password}">Password</td>
+                    <td th:text="${user.project}">Project</td>
+                    <td>
+                        <form th:action="@{/editUser(user_id=${user.getUser_id()})}" method="post"> <!-- ' + '${user.getUser_id()}' -->
+                            <input type="submit" value="Edit user"/>  <!--th:attr="id='u'+${user.getUser_id()}"-->
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
