@@ -20,7 +20,7 @@
                 <th>Borrowed by</th>
                 <th>Borrow now</th>
             </tr>
-            <tr class="tb-row" th:each="book : ${books}">
+            <tr class="tb-row" th:each ="book : ${books}">
                 <td th:text="${book.getBookTitle()}">Title</td>
                 <td th:text="${book.getBookAuthor()}">Author</td>
                 <td th:text="${book.getBookPublishedIn()}">Date of publication</td>

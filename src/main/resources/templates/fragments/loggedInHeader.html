@@ -1,6 +1,6 @@
 <header>
     <div class="head">
-        <div class="title">LIBRARY TOOL</div>
+        <div class="title" th:text="${auth ? 'ENTERPRISE' : ''} + ' LIBRARY TOOL'">LIBRARY TOOL</div>
         <div class="uj">
             <a href="/users" class="reg usersButton">users</a>
             <a href="/books" class="reg booksButton">books</a>

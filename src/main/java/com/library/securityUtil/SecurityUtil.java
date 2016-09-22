@@ -4,6 +4,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 public class SecurityUtil {
 
@@ -22,4 +24,9 @@ public class SecurityUtil {
         }
         return false;
     }
+
+    public static String returnRole() {
+        return SecurityContextHolder.getContext().getAuthentication().getAuthorities().toString();
+    }
+
 }

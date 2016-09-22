@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
+import static com.library.controller.MVObjectHandler.addToEachModelAndView;
+
 @Controller
 public class NavigationController {
 
@@ -24,17 +26,18 @@ public class NavigationController {
 
     @RequestMapping(value = "books", method= RequestMethod.GET)
     public ModelAndView books(HttpServletRequest request) {
-//        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("books", (bookRequest.listAllBooks()).books);
+        addToEachModelAndView(modelAndView);
         modelAndView.setViewName("authorized/books");
         return modelAndView;
     }
 
     @RequestMapping(value = "users", method= RequestMethod.GET)
-    public ModelAndView users(HttpServletRequest request) {
+    public ModelAndView users() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("users", (userRequest.getAllUsers()).users);
+        addToEachModelAndView(modelAndView);
         modelAndView.setViewName("authorized/users");
         return modelAndView;
     }
@@ -43,6 +46,7 @@ public class NavigationController {
     public ModelAndView borrowings(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("borrowings", (borrowingRequest.getAllBorrowings()).borrowings);
+        addToEachModelAndView(modelAndView);
         modelAndView.setViewName("authorized/borrowings");
         return modelAndView;
     }

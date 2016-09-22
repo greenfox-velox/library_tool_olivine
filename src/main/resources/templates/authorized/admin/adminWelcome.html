@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to the Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<header th:replace="fragments/loggedInHeader :: header"></header>
+<div class="landingContainer welcomeMessage">
+<h1 th:text="'Hey ' + ${#httpServletRequest.remoteUser} + ' ' + ${ auth ? 'admin' : 'user'} + ', how are you today?'">Text</h1>
+</div>
+</body>
+</html>

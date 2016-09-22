@@ -8,8 +8,8 @@
 </head>
 <body>
 <header th:replace="fragments/loggedInHeader :: header"></header>
-<div class="landingContainer">
-<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]], you are in!</h1>
+<div class="landingContainer welcomeMessage">
+    <h1 th:text="'Hey ' + ${#httpServletRequest.remoteUser} + ' ' + ${ auth ? 'admin' : 'user'} + ', how are you today?'">Text</h1>
 </div>
 </body>
 </html>

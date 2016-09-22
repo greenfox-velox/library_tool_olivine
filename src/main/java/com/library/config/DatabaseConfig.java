@@ -18,11 +18,7 @@ public class DatabaseConfig {
     public HashMap<String,String> setUrlForDataSource() {
         HashMap<String,String> myUrl = new HashMap<String,String>();
         try {
-//            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
             URI dbUri = new URI("mysql://root:alma123@localhost:3306/heroku_1230023ab8a6ac8");
-//            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8");
-
-            mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true
             myUrl.put("username", dbUri.getUserInfo().split(":")[0]);
             myUrl.put("password", dbUri.getUserInfo().split(":")[1]);
             myUrl.put("dbUrl", "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath());
@@ -55,3 +51,9 @@ public class DatabaseConfig {
     @Bean
     public BorrowingRequests borrowingRequests() { return new BorrowingRequests(dataSource()); }
 }
+
+
+
+//            URI dbUri = new URI("mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8");
+//            URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+ /*mysql://b32ab3afad4bf7:fa709e80@eu-cdbr-west-01.cleardb.com/heroku_1230023ab8a6ac8?reconnect=true*/

@@ -7,7 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static com.library.controller.MVObjectHandler.addToEachModelAndView;
 import static com.library.securityUtil.SecurityUtil.hasRole;
+import static com.library.securityUtil.SecurityUtil.returnRole;
 
 @Controller
 public class LoginController {
@@ -21,12 +23,13 @@ public class LoginController {
 
     @RequestMapping(value = "/welcome")
     public ModelAndView hello(HttpServletRequest request) {
-        System.out.println(request.getUserPrincipal());
         ModelAndView modelAndView = new ModelAndView();
         if (hasRole("user")) {
-            modelAndView.setViewName("authorized/welcome");
+            modelAndView.setViewName("authorized/user/userWelcome");
+            addToEachModelAndView(modelAndView);
         }else if (hasRole("admin")) {
-            modelAndView.setViewName("authorized/welcome");
+            modelAndView.setViewName("authorized/admin/adminWelcome");
+            addToEachModelAndView(modelAndView);
         }
         return modelAndView;
     }

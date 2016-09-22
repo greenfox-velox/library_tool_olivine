@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" href="../css/style.css"/>
+</head>
+<header th:replace="fragments/loggedInHeader :: header"></header>
+<body>
+<div class="container">
+    <form class="form-horizontal" action="#" th:action="@{/edit/user}" th:object="${user}" method="post">
+        <input class="form-control" type="text" th:name="userName" th:value="${userToEdit.getUserName()}"/> <!--th:field="*{userName}"-->
+        <input class="form-control" type="text" th:name="email" th:value="${userToEdit.getEmail()}"/> <!--th:field="*{email}"-->
+        <input class="form-control" type="text" th:name="role" th:value="${userToEdit.getRole()}"/> <!-- th:field="*{password}" -->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    </form>
+    <!--<form  class="form-horizontal" action="#" th:action="@{/edit/user}" th:object="${user}" method="post">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Delete User</button>
+    </form>-->
+</div>
+
+</body>
+</html>

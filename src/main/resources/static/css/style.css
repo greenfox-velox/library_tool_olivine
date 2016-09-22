@@ -169,3 +169,9 @@ height:10px;
 .btn{
 border: none;
 margin-top:35px;}
+
+.welcomeMessage {
+    width: 300px;
+    background-color: rgba(255,255,255,0.4);
+    text-align: center;
+}

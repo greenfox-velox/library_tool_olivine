@@ -34,8 +34,8 @@
                     <td th:text="${user.password}">Password</td>
                     <td th:text="${user.project}">Project</td>
                     <td>
-                        <form th:action="@{/editUser(user_id=${user.getUser_id()})}" method="post"> <!-- ' + '${user.getUser_id()}' -->
-                            <input type="submit" value="Edit user"/>  <!--th:attr="id='u'+${user.getUser_id()}"-->
+                        <form th:action="@{/edit/user/{id}(id=${user.getUser_id()})}" method="get">
+                            <input type="submit" value="Edit user"/>
                         </form>
                     </td>
                 </tr>

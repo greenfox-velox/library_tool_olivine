@@ -3,10 +3,14 @@ package com.library.requests.user;
 import com.library.model.business.User;
 import com.library.model.view.UserList;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserRequests {
 
@@ -28,6 +32,17 @@ public class UserRequests {
         }
         return userList;
     }
+
+    public User getUserById(int id) {
+        for (User user : template.query("select * from users", new UserMapper())) {
+            if (user.getUser_id() == (id)) {
+                return user;
+            }
+        }
+        return new User();
+    }
+
+
 
     public boolean isUsernameFree(String userName) {
         for (User user : template.query("select * from users", new UserMapper())) {
